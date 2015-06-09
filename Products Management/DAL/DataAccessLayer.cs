@@ -42,6 +42,7 @@ namespace Products_Management.DAL
             SqlCommand sqlcmd = new SqlCommand();
             sqlcmd.CommandType = CommandType.StoredProcedure;
             sqlcmd.CommandText = stored_procedure;
+            sqlcmd.Connection = sqlconnection;
 
             if (param != null)
             {
@@ -62,6 +63,7 @@ namespace Products_Management.DAL
             SqlCommand sqlcmd = new SqlCommand();
             sqlcmd.CommandType = CommandType.StoredProcedure;
             sqlcmd.CommandText = stored_procedure;
+            sqlcmd.Connection = sqlconnection;
 
             if (param != null)
             {

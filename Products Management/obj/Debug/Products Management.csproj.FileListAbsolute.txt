@@ -1,1 +1,9 @@
 D:\Dropbox\Work C#\Products Management\Products Management\bin\Debug\Products Management.exe.config
+D:\Dropbox\Work C#\Products Management\Products Management\obj\Debug\Products Management.csprojResolveAssemblyReference.cache
+D:\Dropbox\Work C#\Products Management\Products Management\obj\Debug\Products_Management.PL.FRM_LOGIN.resources
+D:\Dropbox\Work C#\Products Management\Products Management\obj\Debug\Products_Management.Properties.Resources.resources
+D:\Dropbox\Work C#\Products Management\Products Management\obj\Debug\Products Management.csproj.GenerateResource.Cache
+D:\Dropbox\Work C#\Products Management\Products Management\bin\Debug\Products Management.exe
+D:\Dropbox\Work C#\Products Management\Products Management\bin\Debug\Products Management.pdb
+D:\Dropbox\Work C#\Products Management\Products Management\obj\Debug\Products Management.exe
+D:\Dropbox\Work C#\Products Management\Products Management\obj\Debug\Products Management.pdb
