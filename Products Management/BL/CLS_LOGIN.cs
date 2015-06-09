@@ -24,6 +24,7 @@ namespace Products_Management.BL
             DAL.Open();
             DataTable Dt = new DataTable();
             Dt = DAL.SelectData("SP_LOGIN", param);
+            DAL.Close();
             return Dt;
         }   
     }

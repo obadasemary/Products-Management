@@ -7,3 +7,4 @@ D:\Dropbox\Work C#\Products Management\Products Management\bin\Debug\Products Ma
 D:\Dropbox\Work C#\Products Management\Products Management\bin\Debug\Products Management.pdb
 D:\Dropbox\Work C#\Products Management\Products Management\obj\Debug\Products Management.exe
 D:\Dropbox\Work C#\Products Management\Products Management\obj\Debug\Products Management.pdb
+D:\Dropbox\Work C#\Products Management\Products Management\obj\Debug\Products_Management.PL.FRM_MAIN.resources
