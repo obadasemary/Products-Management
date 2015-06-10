@@ -61,7 +61,7 @@
             this.المستخدمينToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(382, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(467, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -126,6 +126,7 @@
             this.إدارةالمنتجاتToolStripMenuItem.Name = "إدارةالمنتجاتToolStripMenuItem";
             this.إدارةالمنتجاتToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.إدارةالمنتجاتToolStripMenuItem.Text = "إدارة المنتجات";
+            this.إدارةالمنتجاتToolStripMenuItem.Click += new System.EventHandler(this.إدارةالمنتجاتToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -210,7 +211,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(382, 323);
+            this.ClientSize = new System.Drawing.Size(467, 357);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
@@ -219,6 +220,7 @@
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "برنامج إدارة المبيعات (نسخة تجريبية )";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

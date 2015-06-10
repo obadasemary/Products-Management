@@ -57,5 +57,14 @@ namespace Products_Management.BL
             DAL.Close();
             return Dt;
         }
+
+        public DataTable GET_ALL_PRODUCTS()
+        {
+            DAL.DataAccessLayer DAL = new DAL.DataAccessLayer();
+            DataTable Dt = new DataTable();
+            Dt = DAL.SelectData("GET_ALL_PRODUCTS",null);
+            DAL.Close();
+            return Dt;
+        }
     }
 }

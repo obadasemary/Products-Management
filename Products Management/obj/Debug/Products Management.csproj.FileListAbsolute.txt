@@ -9,3 +9,4 @@ D:\Dropbox\Work C#\Products Management\Products Management\obj\Debug\Products Ma
 D:\Dropbox\Work C#\Products Management\Products Management\obj\Debug\Products Management.pdb
 D:\Dropbox\Work C#\Products Management\Products Management\obj\Debug\Products_Management.PL.FRM_MAIN.resources
 D:\Dropbox\Work C#\Products Management\Products Management\obj\Debug\Products_Management.PL.FRM_ADD_PRODUCT.resources
+D:\Dropbox\Work C#\Products Management\Products Management\obj\Debug\Products_Management.PL.FRM_PRODUCTS.resources

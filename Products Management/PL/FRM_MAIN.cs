@@ -61,5 +61,11 @@ namespace Products_Management.PL
             FRM_ADD_PRODUCT frm = new FRM_ADD_PRODUCT();
             frm.ShowDialog();
         }
+
+        private void إدارةالمنتجاتToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FRM_PRODUCTS frm = new FRM_PRODUCTS();
+            frm.ShowDialog();
+        }
     }
 }
