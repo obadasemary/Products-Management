@@ -61,7 +61,7 @@
             this.المستخدمينToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(405, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(382, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -119,6 +119,7 @@
             this.إضافةمنتججديدToolStripMenuItem.Name = "إضافةمنتججديدToolStripMenuItem";
             this.إضافةمنتججديدToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.إضافةمنتججديدToolStripMenuItem.Text = "إضافة منتج جديد";
+            this.إضافةمنتججديدToolStripMenuItem.Click += new System.EventHandler(this.إضافةمنتججديدToolStripMenuItem_Click);
             // 
             // إدارةالمنتجاتToolStripMenuItem
             // 
@@ -209,7 +210,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(405, 263);
+            this.ClientSize = new System.Drawing.Size(382, 323);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;

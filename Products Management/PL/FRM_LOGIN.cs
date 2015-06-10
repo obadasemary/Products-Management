@@ -23,13 +23,12 @@ namespace Products_Management.PL
             DataTable Dt = log.LOGIN(txtID.Text, txtPWD.Text);
             if (Dt.Rows.Count > 0)
             {
-                FRM_MAIN frm = new FRM_MAIN();
-               
-                frm.المنتجاتToolStripMenuItem.Enabled = true;
-                frm.العملاءToolStripMenuItem.Enabled = true;
-                frm.المستخدمينToolStripMenuItem.Enabled = true;
-                frm.إنشاءنسخةاحتياطيةToolStripMenuItem.Enabled = true;
-                frm.استعادةنسخةمحفوظةToolStripMenuItem.Enabled = true;
+                FRM_MAIN.getMainForm.المنتجاتToolStripMenuItem.Enabled = true;
+                FRM_MAIN.getMainForm.العملاءToolStripMenuItem.Enabled = true;
+                FRM_MAIN.getMainForm.المستخدمينToolStripMenuItem.Enabled = true;
+                FRM_MAIN.getMainForm.إنشاءنسخةاحتياطيةToolStripMenuItem.Enabled = true;
+                FRM_MAIN.getMainForm.استعادةنسخةمحفوظةToolStripMenuItem.Enabled = true;
+                this.Close();
             }
             else
             {

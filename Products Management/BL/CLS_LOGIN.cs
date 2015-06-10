@@ -21,7 +21,7 @@ namespace Products_Management.BL
             param[1] = new SqlParameter("@PWD", SqlDbType.NVarChar, 50);
             param[1].Value = PWD;
 
-            DAL.Open();
+            
             DataTable Dt = new DataTable();
             Dt = DAL.SelectData("SP_LOGIN", param);
             DAL.Close();
