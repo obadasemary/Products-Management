@@ -65,6 +65,12 @@
     <Compile Include="PL\FRM_MAIN.Designer.cs">
       <DependentUpon>FRM_MAIN.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\FRM_PREVIEW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_PREVIEW.Designer.cs">
+      <DependentUpon>FRM_PREVIEW.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\FRM_PRODUCTS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\FRM_MAIN.resx">
       <DependentUpon>FRM_MAIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_PREVIEW.resx">
+      <DependentUpon>FRM_PREVIEW.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\FRM_PRODUCTS.resx">
       <DependentUpon>FRM_PRODUCTS.cs</DependentUpon>

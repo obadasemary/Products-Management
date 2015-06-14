@@ -13,6 +13,7 @@ namespace Products_Management.PL
 {
     public partial class FRM_ADD_PRODUCT : Form
     {
+        public string state = "add";
         BL.CLS_PRODUCT prd = new BL.CLS_PRODUCT();
         public FRM_ADD_PRODUCT()
         {
@@ -51,15 +52,18 @@ namespace Products_Management.PL
 
         private void txtRef_Validated(object sender, EventArgs e)
         {
-            DataTable Dt = new DataTable();
-            Dt = prd.VERIFY_PRODUCT_ID(txtRef.Text);
-            if (Dt.Rows.Count > 0)
+            if (state == "add")
             {
-                MessageBox.Show("هذا الاسم موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtRef.Focus();
-                txtRef.SelectionStart = 0;
-                txtRef.SelectionLength = txtRef.TextLength;
-            }
+                DataTable Dt = new DataTable();
+                Dt = prd.VERIFY_PRODUCT_ID(txtRef.Text);
+                if (Dt.Rows.Count > 0)
+                {
+                    MessageBox.Show("هذا الاسم موجود مسبقا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtRef.Focus();
+                    txtRef.SelectionStart = 0;
+                    txtRef.SelectionLength = txtRef.TextLength;
+                }
+            }            
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

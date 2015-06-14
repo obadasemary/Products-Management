@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Products_Management.PL
 {
@@ -46,6 +47,33 @@ namespace Products_Management.PL
                 MessageBox.Show("تم إلغاء عملية الحذف", "عملية الحذف", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FRM_ADD_PRODUCT frm = new FRM_ADD_PRODUCT();
+            frm.txtRef.Text = this.dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            frm.txtDes.Text = this.dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            frm.txtQte.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            frm.txtPrice.Text = this.dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            frm.cmbCategories.Text = this.dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            frm.Text = "تحديث المنتج :" + this.dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            frm.btnOk.Text = "تحديث";
+            frm.state = "update";
+            frm.txtRef.ReadOnly = true;
+            byte[] Img = (byte[])prd.GET_IMAGE_PRODUCT(this.dataGridView1.CurrentRow.Cells[0].Value.ToString()).Rows[0][0];
+            MemoryStream ms = new MemoryStream(Img);
+            frm.pbox.Image = Image.FromStream(ms);
+            frm.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            FRM_PREVIEW frm = new FRM_PREVIEW();
+            byte[] Img = (byte[])prd.GET_IMAGE_PRODUCT(this.dataGridView1.CurrentRow.Cells[0].Value.ToString()).Rows[0][0];
+            MemoryStream ms = new MemoryStream(Img);
+            frm.pictureBox1.Image = Image.FromStream(ms);
+            frm.ShowDialog();
         }
     }
 }
