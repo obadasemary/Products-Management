@@ -46,6 +46,7 @@ namespace Products_Management.PL
             prd.ADD_PROUDCT(Convert.ToInt32(cmbCategories.SelectedValue), txtRef.Text, txtDes.Text, Convert.ToInt32(txtQte.Text), txtPrice.Text, byteImage);
 
             MessageBox.Show("تمت الإضافة بنجاح", "عملية الإضافة", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
         }
 
         private void txtRef_Validated(object sender, EventArgs e)

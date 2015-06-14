@@ -66,5 +66,17 @@ namespace Products_Management.BL
             DAL.Close();
             return Dt;
         }
+
+        public DataTable SEARCH_PRODUCT(string ID)
+        {
+            DAL.DataAccessLayer DAL = new DAL.DataAccessLayer();
+            DataTable Dt = new DataTable();
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@ID", SqlDbType.NVarChar, 50);
+            param[0].Value = ID;
+            Dt = DAL.SelectData("SEARCH_PRODUCT", param);
+            DAL.Close();
+            return Dt;
+        }
     }
 }

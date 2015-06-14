@@ -18,5 +18,18 @@ namespace Products_Management.PL
             InitializeComponent();
             this.dataGridView1.DataSource = prd.GET_ALL_PRODUCTS();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            DataTable Dt = new DataTable();
+            Dt = prd.SEARCH_PRODUCT(txtSearch.Text);
+            this.dataGridView1.DataSource = Dt;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FRM_ADD_PRODUCT frm = new FRM_ADD_PRODUCT();
+            frm.ShowDialog();
+        }
     }
 }
