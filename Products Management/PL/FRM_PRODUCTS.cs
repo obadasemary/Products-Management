@@ -30,6 +30,22 @@ namespace Products_Management.PL
         {
             FRM_ADD_PRODUCT frm = new FRM_ADD_PRODUCT();
             frm.ShowDialog();
+            this.dataGridView1.DataSource = prd.GET_ALL_PRODUCTS();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("هل تريد فعلا حذف المنتج المحدد ؟", "عملية الحذف", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            {
+                prd.DELETE_PRODUCT(this.dataGridView1.CurrentRow.Cells[0].Value.ToString());
+                MessageBox.Show("تمت عملية الحذف بنجاح", "عملية الحذف", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.dataGridView1.DataSource = prd.GET_ALL_PRODUCTS();
+            }
+            else
+            {
+                MessageBox.Show("تم إلغاء عملية الحذف", "عملية الحذف", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            
         }
     }
 }

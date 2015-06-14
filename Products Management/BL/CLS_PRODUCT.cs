@@ -78,5 +78,17 @@ namespace Products_Management.BL
             DAL.Close();
             return Dt;
         }
+
+        public void DELETE_PRODUCT(string ID)
+        {
+            DAL.DataAccessLayer DAL = new DAL.DataAccessLayer();
+            DAL.Open();
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@ID", SqlDbType.NVarChar, 50);
+            param[0].Value = ID;
+
+            DAL.ExecuteCommand("DELETE_PRODUCT", param);
+            DAL.Close();
+        }
     }
 }
