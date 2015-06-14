@@ -12,6 +12,7 @@ namespace Products_Management.PL
 {
     public partial class FRM_MAIN : Form
     {
+        //Single Imstance
         private static FRM_MAIN frm;
 
         static void frm_FormClosed(object sender, FormClosedEventArgs e)
@@ -35,9 +36,7 @@ namespace Products_Management.PL
         {
             InitializeComponent();
             if (frm == null)
-            {
-                frm = this;
-            }
+                frm = this;            
             this.المنتجاتToolStripMenuItem.Enabled = false;
             this.العملاءToolStripMenuItem.Enabled = false;
             this.المستخدمينToolStripMenuItem.Enabled = false;

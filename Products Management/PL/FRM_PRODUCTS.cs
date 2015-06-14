@@ -13,10 +13,33 @@ namespace Products_Management.PL
 {
     public partial class FRM_PRODUCTS : Form
     {
+        //Single Imstance
+        private static FRM_PRODUCTS frm;
+
+        static void frm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            frm = null;
+        }
+
+        public static FRM_PRODUCTS getMainForm
+        {
+            get
+            {
+                if (frm == null)
+                {
+                    frm = new FRM_PRODUCTS();
+                    frm.FormClosed += new FormClosedEventHandler(frm_FormClosed);
+                }
+                return frm;
+            }
+        }
+
         BL.CLS_PRODUCT prd = new BL.CLS_PRODUCT();
         public FRM_PRODUCTS()
         {
             InitializeComponent();
+            if (frm == null)
+                frm = this;            
             this.dataGridView1.DataSource = prd.GET_ALL_PRODUCTS();
         }
 
@@ -65,6 +88,7 @@ namespace Products_Management.PL
             MemoryStream ms = new MemoryStream(Img);
             frm.pbox.Image = Image.FromStream(ms);
             frm.ShowDialog();
+            this.dataGridView1.DataSource = prd.GET_ALL_PRODUCTS();
         }
 
         private void button4_Click(object sender, EventArgs e)

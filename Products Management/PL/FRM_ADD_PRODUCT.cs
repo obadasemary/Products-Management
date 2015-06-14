@@ -40,14 +40,29 @@ namespace Products_Management.PL
 
         private void btnOk_Click(object sender, EventArgs e)
         {
-            MemoryStream ms = new MemoryStream();
-            pbox.Image.Save(ms, pbox.Image.RawFormat);
-            byte[] byteImage = ms.ToArray();
+            if (state == "add")
+            {
+                MemoryStream ms = new MemoryStream();
+                pbox.Image.Save(ms, pbox.Image.RawFormat);
+                byte[] byteImage = ms.ToArray();
 
-            prd.ADD_PROUDCT(Convert.ToInt32(cmbCategories.SelectedValue), txtRef.Text, txtDes.Text, Convert.ToInt32(txtQte.Text), txtPrice.Text, byteImage);
+                prd.ADD_PROUDCT(Convert.ToInt32(cmbCategories.SelectedValue), txtRef.Text, txtDes.Text, Convert.ToInt32(txtQte.Text), txtPrice.Text, byteImage);
 
-            MessageBox.Show("تمت الإضافة بنجاح", "عملية الإضافة", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Close();
+                MessageBox.Show("تمت الإضافة بنجاح", "عملية الإضافة", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+            else
+            {
+                MemoryStream ms = new MemoryStream();
+                pbox.Image.Save(ms, pbox.Image.RawFormat);
+                byte[] byteImage = ms.ToArray();
+
+                prd.UPDATE_PRODUCT(Convert.ToInt32(cmbCategories.SelectedValue), txtRef.Text, txtDes.Text, Convert.ToInt32(txtQte.Text), txtPrice.Text, byteImage);
+
+                MessageBox.Show("تمت التعديل بنجاح", "عملية التعديل", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+            //FRM_PRODUCTS.getMainForm.dataGridView1.DataSource = prd.GET_ALL_PRODUCTS();
         }
 
         private void txtRef_Validated(object sender, EventArgs e)
