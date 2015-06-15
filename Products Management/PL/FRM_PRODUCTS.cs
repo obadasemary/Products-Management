@@ -99,5 +99,22 @@ namespace Products_Management.PL
             frm.pictureBox1.Image = Image.FromStream(ms);
             frm.ShowDialog();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            RPT.RPT_PRD_SINGLE myReport = new RPT.RPT_PRD_SINGLE();
+            myReport.SetParameterValue("@ID", this.dataGridView1.CurrentRow.Cells[0].Value.ToString());
+            RPT.FRM_RPT_PRODUCT myForm = new RPT.FRM_RPT_PRODUCT();
+            myForm.crystalReportViewer1.ReportSource = myReport;
+            myForm.ShowDialog();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            RPT.RPT_ALL_PRD myReport = new RPT.RPT_ALL_PRD();
+            RPT.FRM_RPT_PRODUCT myForm = new RPT.FRM_RPT_PRODUCT();
+            myForm.crystalReportViewer1.ReportSource = myReport;
+            myForm.ShowDialog();
+        }
     }
 }
