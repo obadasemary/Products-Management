@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.CrystalReports;
+using CrystalDecisions.Shared;
 
 namespace Products_Management.PL
 {
@@ -115,6 +118,46 @@ namespace Products_Management.PL
             RPT.FRM_RPT_PRODUCT myForm = new RPT.FRM_RPT_PRODUCT();
             myForm.crystalReportViewer1.ReportSource = myReport;
             myForm.ShowDialog();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.dataGridView1.DataSource = prd.GET_ALL_PRODUCTS();
+            RPT.RPT_ALL_PRD myReport = new RPT.RPT_ALL_PRD();
+
+            //Create Export Options
+            ExportOptions export = new ExportOptions();
+            
+            //Create Object For Destination
+            DiskFileDestinationOptions dfOptionXLS = new DiskFileDestinationOptions();
+            DiskFileDestinationOptions dfOptionPDF = new DiskFileDestinationOptions();
+
+            PdfFormatOptions pdfFormat = new PdfFormatOptions();
+            ExcelFormatOptions excelFormat = new ExcelFormatOptions();
+
+            //Set The Path of Destination For XLS
+            dfOptionXLS.DiskFileName = @"D:\PRODUCTLIST.xls";
+            export = myReport.ExportOptions;
+            export.ExportDestinationType = ExportDestinationType.DiskFile;
+            export.ExportFormatType = ExportFormatType.Excel;
+            export.ExportFormatOptions = excelFormat;
+            export.ExportDestinationOptions = dfOptionXLS;
+            myReport.Export();
+
+            //Set The Path of Destination For PDF
+            dfOptionPDF.DiskFileName = @"D:\PRODUCTLIST.PDF";
+            export = myReport.ExportOptions;
+            export.ExportDestinationType = ExportDestinationType.DiskFile;
+            export.ExportFormatType = ExportFormatType.PortableDocFormat;           
+            export.ExportFormatOptions = pdfFormat;
+            export.ExportDestinationOptions = dfOptionPDF;
+            myReport.Export();
+            MessageBox.Show("List Exported Successfully", "Export", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

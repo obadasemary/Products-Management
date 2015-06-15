@@ -92,6 +92,12 @@
     <Compile Include="RPT\FRM_RPT_PRODUCT.Designer.cs">
       <DependentUpon>FRM_RPT_PRODUCT.cs</DependentUpon>
     </Compile>
+    <Compile Include="RPT\RPT_ALL.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPT_ALL.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="RPT\RPT_ALL_PRD.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -131,6 +137,10 @@
     </Compile>
     <EmbeddedResource Include="RPT\FRM_RPT_PRODUCT.resx">
       <DependentUpon>FRM_RPT_PRODUCT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\RPT_ALL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPT_ALL.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="RPT\RPT_ALL_PRD.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
