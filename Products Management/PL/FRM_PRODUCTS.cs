@@ -136,23 +136,37 @@ namespace Products_Management.PL
             ExcelFormatOptions excelFormat = new ExcelFormatOptions();
 
             //Set The Path of Destination For XLS
-            dfOptionXLS.DiskFileName = @"D:\PRODUCTLIST.xls";
+            saveFileDialog1.Filter = "Text Files | *.XLS";
+            saveFileDialog1.InitialDirectory = "D:\\";
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                dfOptionXLS.DiskFileName = saveFileDialog1.FileName;
+            }
+            //dfOptionXLS.DiskFileName = @"D:\PRODUCTLIST.xls";
             export = myReport.ExportOptions;
             export.ExportDestinationType = ExportDestinationType.DiskFile;
             export.ExportFormatType = ExportFormatType.Excel;
             export.ExportFormatOptions = excelFormat;
             export.ExportDestinationOptions = dfOptionXLS;
             myReport.Export();
+            MessageBox.Show("List XLS Exported Successfully", "Export", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             //Set The Path of Destination For PDF
-            dfOptionPDF.DiskFileName = @"D:\PRODUCTLIST.PDF";
+            //dfOptionPDF.DiskFileName = @"D:\PRODUCTLIST.PDF";
+            saveFileDialog1.FileName = "";
+            saveFileDialog1.Filter = "Text Files | *.PDF";
+            saveFileDialog1.InitialDirectory = "D:\\";
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                dfOptionPDF.DiskFileName = saveFileDialog1.FileName;
+            }
             export = myReport.ExportOptions;
             export.ExportDestinationType = ExportDestinationType.DiskFile;
             export.ExportFormatType = ExportFormatType.PortableDocFormat;           
             export.ExportFormatOptions = pdfFormat;
             export.ExportDestinationOptions = dfOptionPDF;
             myReport.Export();
-            MessageBox.Show("List Exported Successfully", "Export", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("List PDF Exported Successfully", "Export", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void button8_Click(object sender, EventArgs e)
