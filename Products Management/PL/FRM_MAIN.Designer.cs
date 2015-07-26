@@ -89,12 +89,14 @@
             this.إنشاءنسخةاحتياطيةToolStripMenuItem.Name = "إنشاءنسخةاحتياطيةToolStripMenuItem";
             this.إنشاءنسخةاحتياطيةToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.إنشاءنسخةاحتياطيةToolStripMenuItem.Text = "إنشاء نسخة احتياطية";
+            this.إنشاءنسخةاحتياطيةToolStripMenuItem.Click += new System.EventHandler(this.إنشاءنسخةاحتياطيةToolStripMenuItem_Click);
             // 
             // استعادةنسخةمحفوظةToolStripMenuItem
             // 
             this.استعادةنسخةمحفوظةToolStripMenuItem.Name = "استعادةنسخةمحفوظةToolStripMenuItem";
             this.استعادةنسخةمحفوظةToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.استعادةنسخةمحفوظةToolStripMenuItem.Text = "استعادة نسخة محفوظة";
+            this.استعادةنسخةمحفوظةToolStripMenuItem.Click += new System.EventHandler(this.استعادةنسخةمحفوظةToolStripMenuItem_Click);
             // 
             // تسجيلالخروجToolStripMenuItem
             // 

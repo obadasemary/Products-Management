@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Products_Management.PL
 {
@@ -14,7 +15,9 @@ namespace Products_Management.PL
     {
         //Single Imstance
         private static FRM_MAIN frm;
-
+        SqlConnection sqlconnection = new SqlConnection(@"Server=.\OBADA; Database=Product_DB; Integrated Security=true");
+        SqlConnection Sqlconnection = new SqlConnection(@"Server=.\OBADA; Database=Master; Integrated Security=true");
+        SqlCommand Cmd;
         static void frm_FormClosed(object sender, FormClosedEventArgs e)
         {
             frm = null;
@@ -65,6 +68,34 @@ namespace Products_Management.PL
         {
             FRM_PRODUCTS frm = new FRM_PRODUCTS();
             frm.ShowDialog();
+        }
+
+        private void إنشاءنسخةاحتياطيةToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog SFD = new SaveFileDialog();
+            SFD.Filter = "Backup Files (*.Bak) |*.bak";
+            if (SFD.ShowDialog() == DialogResult.OK)
+            {
+                Cmd = new SqlCommand("Backup Database Product_DB To Disk ='" + SFD.FileName + "'", sqlconnection);
+                sqlconnection.Open();
+                Cmd.ExecuteNonQuery();
+                sqlconnection.Close();
+                MessageBox.Show("Backup Completed ", "Backup Database", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void استعادةنسخةمحفوظةToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog OFD = new OpenFileDialog();
+            OFD.Filter = "Backup Files (*.Bak) |*.bak";
+            if (OFD.ShowDialog() == DialogResult.OK)
+            {
+                Cmd = new SqlCommand("ALTER DATABASE Product_DB SET OFFLINE WITH ROLLBACK IMMEDIATE; RESTORE DATABASE Product_DB From Disk ='" + OFD.FileName + "' WITH REPLACE", Sqlconnection);
+                Sqlconnection.Open();
+                Cmd.ExecuteNonQuery();
+                Sqlconnection.Close();
+                MessageBox.Show("Restore Completed ", "Restore Database", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }
