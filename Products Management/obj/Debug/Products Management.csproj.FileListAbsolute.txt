@@ -12,3 +12,18 @@ D:\Dropbox\Work C#\Products Management\Products Management\obj\Debug\Products_Ma
 D:\Dropbox\Work C#\Products Management\Products Management\obj\Debug\Products_Management.PL.FRM_PRODUCTS.resources
 D:\Dropbox\Work C#\Products Management\Products Management\obj\Debug\Products_Management.PL.FRM_PREVIEW.resources
 D:\Dropbox\Work C#\Products Management\Products Management\obj\Debug\Products_Management.RPT.FRM_RPT_PRODUCT.resources
+D:\GitHub\Products-Management\Products Management\bin\Debug\Products Management.exe.config
+D:\GitHub\Products-Management\Products Management\obj\Debug\Products Management.exe
+D:\GitHub\Products-Management\Products Management\obj\Debug\Products Management.pdb
+D:\GitHub\Products-Management\Products Management\bin\Debug\Products Management.exe
+D:\GitHub\Products-Management\Products Management\bin\Debug\Products Management.pdb
+D:\GitHub\Products-Management\Products Management\obj\Debug\Products Management.csprojResolveAssemblyReference.cache
+D:\GitHub\Products-Management\Products Management\obj\Debug\Products_Management.PL.FRM_ADD_PRODUCT.resources
+D:\GitHub\Products-Management\Products Management\obj\Debug\Products_Management.PL.FRM_LOGIN.resources
+D:\GitHub\Products-Management\Products Management\obj\Debug\Products_Management.PL.FRM_MAIN.resources
+D:\GitHub\Products-Management\Products Management\obj\Debug\Products_Management.PL.FRM_PREVIEW.resources
+D:\GitHub\Products-Management\Products Management\obj\Debug\Products_Management.PL.FRM_PRODUCTS.resources
+D:\GitHub\Products-Management\Products Management\obj\Debug\Products_Management.Properties.Resources.resources
+D:\GitHub\Products-Management\Products Management\obj\Debug\Products_Management.RPT.FRM_RPT_PRODUCT.resources
+D:\GitHub\Products-Management\Products Management\obj\Debug\Products Management.csproj.GenerateResource.Cache
+D:\GitHub\Products-Management\Products Management\obj\Debug\Products_Management.PL.FRM_CATEGORIES.resources

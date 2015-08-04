@@ -146,6 +146,7 @@
             this.إدارةالأصنافToolStripMenuItem.Name = "إدارةالأصنافToolStripMenuItem";
             this.إدارةالأصنافToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.إدارةالأصنافToolStripMenuItem.Text = "إدارة الأصناف";
+            this.إدارةالأصنافToolStripMenuItem.Click += new System.EventHandler(this.إدارةالأصنافToolStripMenuItem_Click);
             // 
             // العملاءToolStripMenuItem
             // 

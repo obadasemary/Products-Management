@@ -97,5 +97,11 @@ namespace Products_Management.PL
                 MessageBox.Show("Restore Completed ", "Restore Database", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void إدارةالأصنافToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FRM_CATEGORIES frm = new FRM_CATEGORIES();
+            frm.Show();
+        }
     }
 }

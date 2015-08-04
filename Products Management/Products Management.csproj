@@ -60,6 +60,12 @@
     <Compile Include="PL\FRM_ADD_PRODUCT.Designer.cs">
       <DependentUpon>FRM_ADD_PRODUCT.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\FRM_CATEGORIES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_CATEGORIES.Designer.cs">
+      <DependentUpon>FRM_CATEGORIES.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\FRM_LOGIN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,12 @@
       <DependentUpon>RPT_ALL.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="RPT\RPT_ALL_CAT.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPT_ALL_CAT.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="RPT\RPT_ALL_PRD.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -112,6 +124,9 @@
     </Compile>
     <EmbeddedResource Include="PL\FRM_ADD_PRODUCT.resx">
       <DependentUpon>FRM_ADD_PRODUCT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_CATEGORIES.resx">
+      <DependentUpon>FRM_CATEGORIES.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\FRM_LOGIN.resx">
       <DependentUpon>FRM_LOGIN.cs</DependentUpon>
@@ -141,6 +156,10 @@
     <EmbeddedResource Include="RPT\RPT_ALL.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RPT_ALL.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\RPT_ALL_CAT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPT_ALL_CAT.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="RPT\RPT_ALL_PRD.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

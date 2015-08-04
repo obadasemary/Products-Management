@@ -15,7 +15,7 @@ namespace Products_Management.DAL
         //This Constructor Inisialize the connection object
         public DataAccessLayer()
         {
-            sqlconnection = new SqlConnection(@"Server=.\OBADA; Database=Product_DB; Integrated Security=true");
+            sqlconnection = new SqlConnection(@"Server=.\SQLEXPRESS; Database=Product_DB; Integrated Security=true");
         }
 
         //Method to open the connection
